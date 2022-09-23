@@ -27,18 +27,26 @@ ul {
   margin: auto;
 }
 
-/* PRETTIFY */
 .custom-dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: relative;
-  width: 119px;
+  width: 123px;
   color: #333333;
   border: 1px solid #00000046;
-  color: black;
   font-size: 1rem;
+  min-height: 26px; /* So that longer countries name can expand */
   padding: 8px 10px;
   cursor: pointer;
   opacity: .8;
   border-radius: 3%;
+  background-color: #fff;
+  text-align: left;
+}
+.custom-dropdown:focus,
+.custom-dropdown-list__option:focus {
+  outline: 2px solid #000;
 }
 .custom-dropdown::after {
   color: #333333;
@@ -46,7 +54,7 @@ ul {
   content: "▼";
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: 10px;
   margin-top: -0.5em;
   pointer-events: none;
 }
@@ -61,8 +69,7 @@ ul {
   overflow: hidden auto;
   display: none;
   opacity: 0;
-  z-index: 200;
-  background-color: grey;
+  z-index: 1;
   color: white;
   font-size: inherit;
   outline: 0;
@@ -87,8 +94,19 @@ ul {
 
 .spacer {
   background-color: #fff;
-  z-index: 900;
+  z-index: 2;
   height: 5px;
+}
+
+.hidden-label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .fixed-search {
@@ -106,7 +124,7 @@ ul {
   padding-left: 35px;
   outline: 0;
   background-color: #ffffff;
-  z-index: 1000;
+  z-index: 3;
   display: none;
 }
 
@@ -114,8 +132,17 @@ ul {
   display: block;
 }
 
+.state-msg {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.state-msg-error {
+  color: red;
+}
+
 .custom-dropdown-list__option {
-  padding: 3px 0;
+  padding: 2px 0;
   cursor: pointer;
   margin: 5px auto;
   width: 204px;

@@ -1,6 +1,6 @@
 # Country_Select
 
-This is a ReasonReact project that allows users to chose countries from a custom dropdown list of countries. Users can use the `Tab` key to navigate through the content and the `Enter` key to select an item. 
+This is a ReasonReact project that allows users to chose countries from a custom dropdown list of countries. Users can use the `Tab` key to navigate through the content and the `Enter` or `Space Bar` key to select an item and close the dropdown 
 
 ## Project Structure
 
