@@ -46,7 +46,7 @@ ul {
 }
 .custom-dropdown:focus,
 .custom-dropdown-list__option:focus {
-  outline: 2px solid #000;
+  outline: 1px solid #0000008d; /* Added style so users can know thier current position on the page if using keyboard */
 }
 .custom-dropdown::after {
   color: #333333;
