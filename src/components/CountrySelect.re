@@ -127,7 +127,7 @@ let make = (~className, ~country, ~onChange) => {
              ->Belt.Array.mapWithIndex((_, country) => {
                  let value = country.value;
                  let label = country.label;
-                 <option
+                 <li
                    key=value
                    tabIndex=0
                    className="custom-dropdown-list__option"
@@ -135,7 +135,7 @@ let make = (~className, ~country, ~onChange) => {
                    onKeyPress={_e => handleCountrySelect(label, value)}>
                    <span className={"fi fi-" ++ value} />
                    {str(label)}
-                 </option>;
+                 </li>;
                })
              ->array;
            };
